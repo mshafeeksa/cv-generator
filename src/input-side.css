@@ -1,0 +1,309 @@
+.input-side{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.main-container{
+    width: 650px;
+    height:550px;
+    margin-right: 36px;
+    display: grid;
+    grid-template: repeat(3,3fr)/1fr 5fr;
+    /* overflow: hidden; */
+}
+
+.main-container .button{
+    font-size: 1.4rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 16px 0 0 16px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.125s;
+}
+.person-button{
+    grid-area: 1/1/1/1;
+    background-color: #fc9803;
+}
+
+.main-container .selected-button{
+    border-right: none;
+    /* transform: ; */
+}
+
+.work-button{
+    grid-area: 2/1/2/1;
+    background-color: #0398fc;
+}
+
+.education-button{
+    grid-area: 3/1/3/1;
+    background-color: #42d602;
+}
+
+.display-area{
+    grid-area: 1/2/-1/-1;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    transition-property: all;
+    transition-duration: 0.125s;
+    /* padding: 0 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.person-color{
+    background-color: #fc9803;
+}
+
+.work-color{
+    background-color: #0398fc;
+}
+
+.education-color{
+    background-color: #42d602;
+}
+
+.input-container{
+    width: 70%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    border: 1px solid black;
+    margin: 8px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.input-container input{
+    width: 90%;
+    margin: 4px 8px;
+    background-color:rgba(0, 0, 0, 0);
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.input-container textarea{
+    margin-top: 16px;
+    width: 95%;
+    border: none;
+    outline: none;
+}
+
+.add-button{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+    padding: 1% 3%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    margin: 16px;
+}
+
+.add-button:hover{
+    background-color: #c6c6c6;
+    color: #000;
+}
+
+.display-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    scrollbar-width: none;
+    margin: auto;
+}
+
+.display-container::-webkit-scrollbar {
+    display: none;
+}
+
+.display-container .sub-section{
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.display-container .input-container{
+    width: 80%;
+}
+
+.display-container .date-section input{
+    margin: 1%;
+    margin-top: 10px;
+}
+
+.work-block{
+    width: 80%;
+    padding-bottom: 16px;
+    margin: 12px;
+    background-color: #01454d;
+    border-radius: 16px;
+    animation: fly-up 0.125s ease-out 0s 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.education-block{
+    width: 80%;
+    padding-bottom: 16px;
+    margin: 12px;
+    background-color: #064a01;
+    border-radius: 16px;
+    animation: fly-up 0.125s ease-out 0s 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.display-container .sub-section h4{
+    color: #fff;
+    font-weight: 600;
+}
+
+.display-container .sub-section h3{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 16px 16px 0 0;
+}
+
+
+@keyframes fly-up{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.display-container .date-section{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-container .date-section input{
+    border-radius: 16px;
+    font-size: 1rem;
+    margin-top: 0px;
+}
+
+.display-container .date-section .input-container{
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-container .date-section h4{
+    margin-bottom: 0px;
+    margin-top: 4px;
+    font-size: 1.2rem;
+}
+
+.display-container .outer-container{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 100%;
+}
+
+.display-container .outer-container .input-container{
+    width: 100%;
+}
+
+.display-container .sub-sub-section{
+    width: 90%;
+}
+
+.delete-line-button{
+    font-weight: 900;
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    width: 35px;
+    height: 30px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: url("./assets/delete.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.sub-sub-section h4{
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.sub-sub-section .inner-add-button{
+    margin: 3px auto 12px auto;
+    width: 30px;
+    height: 30px;
+}
+
+.delete-line-button:hover, .delete-work-button:hover{
+    background-color: darkred;
+}
+
+.delete-work-button,.delete-edu-button{
+    font-weight: 900;
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: url("./assets/close.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: -50px
+}

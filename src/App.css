@@ -1,0 +1,18 @@
+:root{
+  --output-side-color : #e8e9fc;
+  --input-side-color: #cbcdf5;
+}
+
+.output-side,
+.input-side {
+  width: 100%;
+  height: 100%;
+}
+
+.output-side{
+  background-color: var(--output-side-color);
+}
+
+.input-side{
+  background-color: var(--input-side-color);
+}
