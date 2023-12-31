@@ -8,3 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+window.onload = () => {
+  document.querySelector(".hide-all").classList.add("hide-all-deactivated");
+}
